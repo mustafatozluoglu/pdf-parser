@@ -9,7 +9,7 @@ app.use(fileUpload());
 
 app.post("/extract-text", (req, res) => {
     if (!req.files || !req.files.pdfFile) {
-        res.status(400).send("No file uploaded");
+        res.status(400).send("No file uploaded. Please upload a PDF file.");
         return;
     }
 
